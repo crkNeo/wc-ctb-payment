@@ -6,7 +6,7 @@ class ctb_Payment{
      * @return void
      */
     public function init(){
-//        add_action('plugin_loaded',array($this,'load_payment_class'));
+        add_action('plugins_loaded',array($this,'load_payment_class'));
         add_filter('woocommerce_payment_gateways',array($this,'add_payment_gateway'));
     }
 
@@ -16,7 +16,7 @@ class ctb_Payment{
      * @return void
      */
     public function load_payment_class(){
-        $file = __DIR__ . '/../includes/class-wc-gateway-ctb-cc.php';
+        $file = __DIR__ . '/../includes/class-wc-gateway-ctb.php';
         if (file_exists($file)){
             include $file;
         }
@@ -28,8 +28,8 @@ class ctb_Payment{
      * @return array
      */
     public function add_payment_gateway($methods){
-        $this->load_payment_class();
-        $methods['ctb-cc'] = 'WC_ctb_Credit_Card_Payment';
+
+        $methods['ctb'] = 'WC_ctb_Credit_Card_Payment';
         return $methods;
     }
 

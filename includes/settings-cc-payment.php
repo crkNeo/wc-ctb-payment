@@ -19,7 +19,7 @@ $setting = array(
     'description' => array(
         'title' => __( 'Description', 'wc-ctb-payment' ),
         'type' => 'text',
-        'description' => __('Allow your costomers make payment with credit ard though out CTB.','wc-ctb-payment'),
+        'description' => __('Allow your customers make payment with credit ard though out CTB.','wc-ctb-payment'),
         'default' => __('Have your customers pay with credit card.','wc-ctb-payment'),
         'desc_tip' => false,
     ),
@@ -32,20 +32,20 @@ $setting = array(
         'desc_tip' => false,
     ),
 
-    'test_Details' => array(
-        'title' => __('TEST API credentials', 'wc-ctb-payment'),
+    'Details' => array(
+        'title' => __('API credentials', 'wc-ctb-payment'),
         'type' => 'title',
     ),
-    'test_merID' => array(
-        'title' => __('test_merID', 'wc-ctb-payment'),
+    'merID' => array(
+        'title' => __('merID', 'wc-ctb-payment'),
         'type' => 'text',
     ),
-    'test_MerchantID' => array(
-        'title' => __('test_MerchantID', 'wc-ctb-payment'),
+    'MerchantID' => array(
+        'title' => __('MerchantID', 'wc-ctb-payment'),
         'type' => 'text',
     ),
-    'test_TerminalID' => array(
-        'title' => __('test_TerminalID', 'wc-ctb-payment'),
+    'TerminalID' => array(
+        'title' => __('TerminalID', 'wc-ctb-payment'),
         'type' => 'text',
     ),
 

@@ -17,40 +17,40 @@ if (! defined( 'WPINC') ){
 }
 
 /**
- * WooCommere CTB Pament plugin uses "wcsp" as the prefix on its functions.
- * WooCommere CTB Pament plugin uses "WCSP" as the prefix on its constants.
+ * WooCommere CTB Pament plugin uses "ctb" as the prefix on its functions.
+ * WooCommere CTB Pament plugin uses "CTB" as the prefix on its constants.
  */
 
-if (! defined('WCSP_INC')){
-        define('WCSP_INC', true);
+if (! defined('CTB_INC')){
+        define('CTB_INC', true);
 }
 /**
- * CONSTANTS - WCSP stands for Woocommerce ctb Payment ^_^
+ * CONSTANTS - CTB stands for Woocommerce ctb Payment ^_^
  *
- * WCSP_PLUGIN_NAME          : Plugin's name.
- * WCSP_PLUGIN_DIR           : The absolute path of the WCSP plugin directory.
- * WCSP_PLUGIN_URL           : The URL of the WCSP plugin directory.
- * WCSP_PLUGIN_PATH          : The absolute path of the WCSP plugin launcher.
- * WCSP_PLUGIN_LANGUAGE_PACK : Translation Language pack.
- * WCSP_PLUGIN_VERSION       : WCSP plugin version number
- * WCSP_PLUGIN_TEXT_DOMAIN   : WCSP plugin text domain
+ * CTB_PLUGIN_NAME          : Plugin's name.
+ * CTB_PLUGIN_DIR           : The absolute path of the CTB plugin directory.
+ * CTB_PLUGIN_URL           : The URL of the CTB plugin directory.
+ * CTB_PLUGIN_PATH          : The absolute path of the CTB plugin launcher.
+ * CTB_PLUGIN_LANGUAGE_PACK : Translation Language pack.
+ * CTB_PLUGIN_VERSION       : CTB plugin version number
+ * CTB_PLUGIN_TEXT_DOMAIN   : CTB plugin text domain
  *
  * Expected values:
  *
- * WCSP_PLUGIN_DIR           :(absolute_path)/wp-content/plugins/
- * WCSP_PLUGIN_URL           :(protocal)://(domain_name)/wp-content/plugins/wc-ctb-payment/
- * WCSP_PLUGIN_PATH          :(absolute_path)/wp-content/plugins/wc-ctb-payment/wc-ctb-payment.php
- * WCSP_PLUGIN_LANGUAGE_PACK : wc-ctb-payment/languages
+ * CTB_PLUGIN_DIR           :(absolute_path)/wp-content/plugins/
+ * CTB_PLUGIN_URL           :(protocol)://(domain_name)/wp-content/plugins/wc-ctb-payment/
+ * CTB_PLUGIN_PATH          :(absolute_path)/wp-content/plugins/wc-ctb-payment/wc-ctb-payment.php
+ * CTB_PLUGIN_LANGUAGE_PACK : wc-ctb-payment/languages
  */
 
-define( 'WCSP_PLUGIN_NAME', plugin_basename( __FILE__) );
-define( 'WCSP_PLUGIN_DIR', plugin_dir_path(__FILE__) );
-define( 'WCSP_PLUGIN_URL', plugin_dir_url(__FILE__)) ;
-define( 'WCSP PLUGIN PATH',__FILE__);
-define( 'WCSP_PLUGIN_LANGUAGE_PACK', dirname( plugin_basename(__FILE__)). '/languages' );
-define( 'WCSP_PLUGIN_VERSION', '1.0.0' );
-define( 'WCSP_PHP_SDK_VERSION', '0.0.10' );
-define( 'WCSP_PLUGIN_TEXT_DOMAIN', 'wc-ctb-payment');
+define( 'CTB_PLUGIN_NAME', plugin_basename( __FILE__) );
+define( 'CTB_PLUGIN_DIR', plugin_dir_path(__FILE__) );
+define( 'CTB_PLUGIN_URL', plugin_dir_url(__FILE__)) ;
+define( 'CTB PLUGIN PATH',__FILE__);
+define( 'CTB_PLUGIN_LANGUAGE_PACK', dirname( plugin_basename(__FILE__)). '/languages' );
+define( 'CTB_PLUGIN_VERSION', '1.0.0' );
+define( 'CTB_PHP_SDK_VERSION', '0.0.10' );
+define( 'CTB_PLUGIN_TEXT_DOMAIN', 'wc-ctb-payment');
 
 /**
  * Start to run WCSP plugin cores.
@@ -59,11 +59,10 @@ define( 'WCSP_PLUGIN_TEXT_DOMAIN', 'wc-ctb-payment');
 // The minimum supported version of PHP.
 if ( version_compare( phpversion(), '7.1.0', '>=' ) ) {
 
-    require_once WCSP_PLUGIN_DIR . 'includes/helpers.php' ;
-    require_once WCSP_PLUGIN_DIR . 'vendor/autoload.php';
+    require_once CTB_PLUGIN_DIR . 'vendor/autoload.php';
 
     // Todo
-    require_once WCSP_PLUGIN_DIR . 'controllers/class-ctb-payment.php';
+    require_once CTB_PLUGIN_DIR . 'controllers/class-ctb-payment.php';
 
     $ctb = new ctb_Payment();
     $ctb->init();
